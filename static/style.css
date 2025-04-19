@@ -1,0 +1,116 @@
+/* static/style.css */
+body {
+    margin: 0;
+    background: #0f0f0f;
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .chat-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  }
+  
+  .chat-header {
+    color: #00ffd5;
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .chat-box {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    color: #eee;
+  }
+  
+  .message {
+    margin: 12px 0;
+    padding: 10px 15px;
+    border-radius: 12px;
+    max-width: 80%;
+    line-height: 1.5;
+    position: relative;
+  }
+  
+  .user {
+    background-color: #007aff;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+  }
+  
+  .bot {
+    background-color: #2c2c2c;
+    color: #00ffd5;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+  }
+  
+  .typing-dots::after {
+    content: '⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏';
+    animation: dots 1s infinite steps(10);
+    display: inline-block;
+  }
+  
+  @keyframes dots {
+    0% { content: '⠋'; }
+    10% { content: '⠙'; }
+    20% { content: '⠹'; }
+    30% { content: '⠸'; }
+    40% { content: '⠼'; }
+    50% { content: '⠴'; }
+    60% { content: '⠦'; }
+    70% { content: '⠧'; }
+    80% { content: '⠇'; }
+    90% { content: '⠏'; }
+  }
+  
+  #chat-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  #user-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    background: #1a1a1a;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  #send-btn {
+    margin-left: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #00ffd5, #007aff);
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  #send-btn:hover {
+    transform: scale(1.1);
+  }
+  
